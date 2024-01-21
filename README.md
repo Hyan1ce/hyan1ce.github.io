@@ -1,4 +1,4 @@
 # hyan1ce.github.io
 Private Github page of Hyanice.
 
-visit:[https://hyan1ce.github.io/](主页)
+[主页](https://hyan1ce.github.io/)
