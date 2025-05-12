@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /_astro/
+
+Sitemap: https://hyan1ce.github.io/sitemap-index.xml
