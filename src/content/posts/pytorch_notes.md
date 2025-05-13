@@ -3,7 +3,7 @@ title: PyTorch learning notes
 published: 2025-05-13
 description: 'Pytorch learning notes, references: LeeDL-Tutorial'
 image: ''
-tags: [Pytorch, Machine Learning]
+tags: [PyTorch, ML]
 category: 'Notes'
 draft: false 
 lang: ''

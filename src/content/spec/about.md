@@ -1,4 +1,5 @@
 # About Me
+
 This is the own site of [IceHyan](https://github.com/Hyan1ce).
 
 ## 教育工作经历
@@ -12,5 +13,11 @@ This is the own site of [IceHyan](https://github.com/Hyan1ce).
 
 - 美国大学生数学建模竞赛 **Finalist**
 - 山东大学优秀学生干部
+
+## 主要工作
+
+待更新，我会努力的嘿嘿嘿
+
+## 关于本站
 
 ::github{repo="Hyan1ce/hyan1ce.github.io"}
