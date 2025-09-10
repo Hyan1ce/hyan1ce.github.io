@@ -1,14 +1,80 @@
 ---
-title: PyTorch learning notes
+title: DL learning notes -- Part 1
 published: 2025-05-13
 description: 'Pytorch learning notes, references: LeeDL-Tutorial'
 image: ''
-tags: [PyTorch, ML]
+tags: [PyTorch, DL, ML]
 category: 'Notes'
 draft: false 
 lang: ''
+
+
 ---
 
-## 参考
+> 参考：李宏毅 深度学习教程：[LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
 
-李宏毅 深度学习教程：[LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
+# Chapter 1
+
+## 机器学习流程
+
+1. 写出一个带有未知参数的函数: $y=b+w_1x$
+
+2. **定义损失**用来衡量函数好坏
+
+   1. 平均绝对误差
+
+   2. 均方误差
+
+      ![image-20250909154537747](assets/image-20250909154537747.png)
+
+3. **解最优化问题**，寻找最优的 $b, w_1$；**梯度下降**是常用的方法。
+
+**梯度下降**：设定**学习率**，让机器自己找到最优参数的过程；可能只能找到局部最小值；可通过调整学习率来改善（但是调整了也未必能找到全局最小值）
+
+**流程图**：
+
+![image-20250909161844749](assets/image-20250909161844749.png)
+
+## 激活函数
+
+**Sigmoid**：倒S型，可以通过调整 $b,w,c$ 得到不同的形状：
+$$
+y=c \frac {1+e^{-(b+wx_1)}}{1}
+$$
+![image-20250909160237187](assets/image-20250909160237187.png)
+
+**ReLU**: 开始是0，某位置之后变为非0的一次函数：$y=c \times \max(0,b+wx_1)$
+
+## 名词定义总结
+
+**超参数**：需要自己设定的参数（如学习率）
+
+**神经元**：ReLU，Sigmoid都算
+
+**隐藏层**：神经网络中每一排称为一个隐藏层
+
+**过拟合**：训练数据和测试数据上的结果不一致
+
+> 如在训练数据上，3层比4层差；但是在没看过的数据上，4层比较差，3层比较好
+
+# Chapter 2
+
+**解决过拟合**：1. 增加训练数据；2. 给模型增加限制，如规定其为二次函数
+
+**交叉验证**：把训练的数据分成两半，一部分称为训练集（training set），一部分是验证集（validation set），如k折交叉验证、留一法验证等
+
+# Chapter 3
+
+## 临界点/鞍点
+
+**临界点**：梯度为0的点统称为临界点。<u>梯度（损失关于参数的微分）</u>为0时，损失无法继续下降，此时既有可能收敛在了**局部极小值点**，也可能收敛在**鞍点**。
+
+**鞍点**：梯度为0，但并不是**局部极小/大值点**的点：
+
+![image-20250909163708309](assets/image-20250909163708309.png)
+
+**判断个临界点到底是局部极小值还是鞍点**：利用泰勒展开式，推导过程跳过
+
+> 其他内容用不上，暂时跳过
+
+# Chapter 4
