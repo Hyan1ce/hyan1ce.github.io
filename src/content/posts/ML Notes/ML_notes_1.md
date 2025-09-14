@@ -9,7 +9,9 @@ draft: false
 lang: ''
 ---
 
-> 参考：李宏毅 深度学习教程：[LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
+# 参考
+
+> 李宏毅 深度学习教程：[LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
 
 # Chapter 1
 
@@ -139,7 +141,7 @@ $$
 2. 不使用汇聚，因为对于棋盘来说汇聚会改变棋盘信息
 3. 使用了192个卷积核（尝试得到的结果，此时效果最好）
 
-> [!CAUTION]
+> [!NOTE]
 >
 > 卷积神经网络**不能处理图像放大缩小或者是旋转的问题**，因此在做图像识别的时候往往都要做数据增强。所谓数据增强就是把训练数据每张图像里面截一小块出来放大，让卷积神经网络看过不同大小的模式；把图像旋转，让它看过某一个物体旋转以后长什么样子，卷积神经网络才会做到好的结果。卷积神经网络不能够处理缩放（scaling）跟旋转（rotation）的问题，但 Spatial Transformer Layer 网络架构可以处理这个问题。
 

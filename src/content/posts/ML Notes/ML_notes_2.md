@@ -9,7 +9,9 @@ draft: false
 lang: ''
 ---
 
-> 参考：李宏毅 深度学习教程：[LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
+# 参考
+
+> 李宏毅 深度学习教程：[LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
 
 # Chapter 6
 
