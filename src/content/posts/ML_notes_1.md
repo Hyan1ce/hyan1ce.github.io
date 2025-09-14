@@ -1,14 +1,12 @@
 ---
 title: DL learning notes -- Part 1
 published: 2025-05-13
-description: 'Pytorch learning notes, references: LeeDL-Tutorial'
+description: 'Pytorch learning notes-Part 1, references: LeeDL-Tutorial'
 image: ''
 tags: [PyTorch, DL, ML]
 category: 'Notes'
 draft: false 
 lang: ''
-
-
 ---
 
 > 参考：李宏毅 深度学习教程：[LeeDL-Tutorial](https://github.com/datawhalechina/leedl-tutorial)
@@ -157,3 +155,32 @@ $$
 2. 下一次有输入时，这些神经元不仅会考虑输入 $x_1,x_2$ ， 还会考虑存到记忆元里的值
 3. 所以记忆元也会影响到输出结果
 4. 记忆元可简称为**单元（cell）**；记忆元的值也可称为**隐状态（hidden state）**
+
+> 隐状态的计算是循环的（recurrent），基于循环计算的隐状态神经网络被称为**循环神经网络(RNN)**
+
+**Elman 网络 & Jordan 网络**
+
+- **Elman 网络（简单循环网络）**：将隐藏层的输出存到记忆元，在下一个时刻输入到下一层
+- Jordan网络：把输出值在下一个时间点在读 进来，把输出存到记忆元里
+- ![image-20250914172016872](assets/image-20250914172016872.png)
+
+## 长短期记忆网络（LSTM）
+
+**LSTM**
+
+1. 长时间的<u>短期</u>记忆
+2. **输入门**：决定何时将输入存入记忆元
+3. **输出门**：决定外界其他的神经元能否从这个记忆元里面把值读出来
+4. **遗忘门**：决定什么时候记忆元要把过去记得的东西忘掉
+
+**梯度消失与梯度爆炸**
+
+- **隐患**：*梯度消失会导致我们的神经网络中前面层的网络权重无法得到更新，也就停止了学习；梯度爆炸会使得学习不稳定， 参数变化太大导致无法获取最优参数*
+- **解决办法**：
+  - 调整学习率很难解决
+  - 一种解决办法是**裁剪（clipping）**，即当梯度大于某一个阈值的时候，不要让它超过那个阈值
+  - LSTM可以解决梯度消失问题，但无法解决梯度爆炸问题
+- 为何LSTM能解决梯度消失问题？
+  - 参考：[RNN 的梯度消失问题-知乎](https://zhuanlan.zhihu.com/p/44163528)
+  - ![image-20250914174801094](assets/image-20250914174801094.png)
+
